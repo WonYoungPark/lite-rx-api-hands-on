@@ -6,6 +6,8 @@ import reactor.core.publisher.Mono;
 
 /**
  * Learn how to merge flux.
+ * 병합(Merge)는 여러 개의 Publisher로부터 전달되는 데이터의 흐름을 하나의 Flux로 합치는 작업을 의미합니다. 이 때 mergeWith 메소드를 사용하게 됩니다.
+ * 여기서 주의할 점은, mergeWith 메소드를 이용하는 경우, 먼저 도착하는 데이터가 먼저 처리되도록 Flux가 생성된다는 것입니다. 즉 병합되는 Flux들의 순서가 보장되지 않고, 늦게 도착하는 데이터는 끼워넣어지게(interleave) 됩니다.
  *
  * @author Sebastien Deleuze
  */
